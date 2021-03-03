@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS TRANSFORM</title>
+	<style>
+		body
+		{
+			background-image: url(jaga2.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		div	
+		{
+			width: 500px;
+			height: 300px;
+			border: 5px solid brown;
+			border-radius: 20px;
+			margin:100px auto;
+			overflow: hidden;
+			box-shadow: 0 0 10px black;
+			position: relative;
+		}
+		div img
+		{
+			width:inherit;
+			height: inherit;
+			border-radius:inherit;
+			filter: grayscale(100%);
+			transition: all 2s;
+			transition-delay: 5s;
+		}
+		div:hover img
+		{
+			transform:scale(1.5,1.5);
+			filter: grayscale(0%);
+		}
+		div #door
+		{
+			width: 245px;
+			background-image: url(door.jpg);
+			background-size: cover;
+			background-position: center;
+			/*background-attachment: fixed;*/
+			/*background-repeat: no-repeat;*/
+			/*background-color: rgba(200,200,200,0.3);*/
+			position: absolute;
+			top: -100px;
+			left: 0px;
+			transition: all 5s;
+			transition-delay: 2s;
+			transform-origin: left;	
+			border:3px solid black;
+		}
+		div:hover #door
+		{
+			transform:perspective(200px) rotateY(90deg);
+			border-radius: 0px 50px 50px 0px;
+		}
+		div #door1
+		{
+			width: 245px;
+			background-image: url(door.jpg);
+			background-size: cover;
+			background-position: center;
+			/*background-attachment: fixed;*/
+			/*background-repeat: no-repeat;*/
+			/*background-color: rgba(200,200,200,0.3);*/
+			position: absolute;
+			top: -100px;
+			right: 0px;
+			transition: all 5s;
+			transition-delay: 2s;
+			transform-origin: right;	
+			border:3px solid black;
+		}
+		div:hover #door1
+		{
+			transform:perspective(200px) rotateY(-90deg);
+			border-radius: 50px 0px 0px 50px;
+		}
+		div #wrapper
+		{
+			border:3px solid black;
+			background-image: url(jaga3.jpg);
+			background-size: cover;
+			background-position: center;
+			/*background-color: rgba(0,0,0,0.5);*/
+			position: absolute;
+			top: -105px;
+			left: -3px;
+			transition: all 2s;
+		}
+		div:hover #wrapper
+		{
+			transform: translateY(-100%);
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="jaga4.jpg">
+		<div id="door"></div>
+		<div id="door1"></div>
+		<div id="wrapper"></div>
+	</div>
+</body>
+</html>
